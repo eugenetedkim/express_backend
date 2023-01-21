@@ -1,5 +1,5 @@
 // Import dependencies
-const http = require('http');
+const https = require('https');
 const app = require('./app');
 
 // Assign a port where our project should run
@@ -7,7 +7,7 @@ const app = require('./app');
 const port = process.env.PORT || 5000;
 
 // Create the server and pass a request listener function that is executed each time the server get a request.
-const server = http.createServer(app);
+const server = https.createServer(app);
 
 server.listen(port);
 
