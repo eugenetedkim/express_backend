@@ -1,5 +1,5 @@
 // Import dependencies
-const http = require('https');
+const http = require('http');
 const app = require('./app');
 
 // Assign a port where our project should run
