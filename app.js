@@ -3,10 +3,14 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
+const cors = require('cors');
+
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
 app.use(morgan('dev'));
+
+app.use(cors());
 
 // app.use() function is used to mount or put the specified middleware function(s) at the path which is being specified.
 // This application-level middleware function is executed every time the app receives a request.
